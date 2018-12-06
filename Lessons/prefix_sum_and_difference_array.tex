@@ -115,9 +115,12 @@
     \end{itemize}
     
     As such, 
-    \begin{equation*}
-        S(i, j) = a_{i} + a_{i + 1} + \dots + a_{j - 1} + a_{j}
-    \end{equation*}
+    \begin{align*}
+        S(i, j) & = a_{i} + a_{i + 1} + \dots + a_{j - 1} + a_{j} \\
+        S(0, j) & = a_{0} + a_{1} + \dots + a_{j - 1} + a_{j} \\
+        S(0, i - 1) & = a_{0} + a_{1} + \dots + a_{i - 2} + a_{i - 1} \\
+        S(i, j) & = S(0, j) - S(0, i - 1)
+    \end{align*}
     
     
 \end{frame}
@@ -140,8 +143,6 @@
                 return psa[j] - psa[i - 1]
             else:
                 return psa[j]
-        
-            return psa[j] - psa[i]
     \end{lstlisting}
     
     \begin{itemize}
