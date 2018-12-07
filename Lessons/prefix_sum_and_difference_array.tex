@@ -22,7 +22,7 @@
 % \usecolortheme{crane}
 \setbeamertemplate{navigation symbols}{}%remove navigation symbols
 
-\title[Prefix Sum and Difference Arrays---Computer Science Club]{\textbf{Prefix Sum and Difference Arrays}}
+\title[Prefix Sum Arrays---Computer Science Club]{\textbf{Prefix Sum Arrays}}
 % \author{Shon Verch}
 \institute{Stephen Lewis Secondary School \\[3ex] {\large Computer Science Club}}
 \date{December 7, 2018}
@@ -46,7 +46,7 @@
 \titlepage 
 \end{frame} 
 
-\section{Prefix Sum Array}
+\section{Introduction}
 
 \begin{frame}{Problem}
 \begin{itemize}
@@ -93,8 +93,8 @@
         def get_subarray_sum(array, i, j):
             total = 0
             
-            for n in range(i, j + 1):
-                total += array[n]
+            for k in range(i, j + 1):
+                total += array[k]
             
             return total
     \end{lstlisting}
@@ -103,12 +103,13 @@
         \item Setup: $\mathcal{O}(1)$
         \item One Query: $\mathcal{O}(n)$
         \item All Queries: $\mathcal{O}(qn)$
+        \item Overall: $\mathcal{O}(qn)$
     \end{itemize}
     
     There needs to be a better way!
 \end{frame}
 
-\begin{frame}{Brief Explanation of Prefix Sum Array}
+\begin{frame}{Brief Explanation of Prefix Sum Array - Part One}
     \begin{itemize}
         \item Let $S(i, j)$ represent the subarray sum from $i$ to $j$ inclusive. \\
         \item Let $a_n$ represent the $n$-th indexed element in the array
@@ -117,12 +118,30 @@
     As such, 
     \begin{align*}
         S(i, j) & = a_{i} + a_{i + 1} + \dots + a_{j - 1} + a_{j} \\
-        S(0, j) & = a_{0} + a_{1} + \dots + a_{j - 1} + a_{j} \\
-        S(0, i - 1) & = a_{0} + a_{1} + \dots + a_{i - 2} + a_{i - 1} \\
-        S(i, j) & = S(0, j) - S(0, i - 1)
     \end{align*}
+    How can we use this information to setup a better solution? \\
     
-    
+    (Hint: Think about how to manipulate the formula).
+\end{frame}
+
+\begin{frame}{Brief Explanation of Prefix Sum Array - Part Two}
+Prefix Sum:
+\begin{itemize}
+    \item Represents the elements up to index $k$
+    \begin{itemize}
+        \item $S(0, k)$
+    \end{itemize}
+\end{itemize} 
+
+We make the following observation:
+\begin{align*}
+    S(0, j) &= a_0 + a_1 + \dots + a_{i - 2} + a_{i - 1} + \dots + a_{j - 1} + a{j} \\
+    S(0, i - 1) &= a_0 + a_1 + \dots + a_{i - 2} + a_{i - 1} \\
+    S(i, j) &= S(0, j) - S(0, i - 1)
+\end{align*}
+
+Therefore, if we set up prefix sums in the beginning, we can use $S(i, j)=S(0, j) - S(0, i - 1)$ for the queries.
+
 \end{frame}
 
 \begin{frame}[fragile]{Prefix Sum Array Solution}
@@ -140,15 +159,16 @@
         
         def get_subarray_sum(psa, i, j):
             if i == 0:
-                return psa[j] - psa[i - 1]
-            else:
                 return psa[j]
+            else:
+                return psa[j] - psa[i - 1]
     \end{lstlisting}
     
     \begin{itemize}
         \item Setup: $\mathcal{O}(n)$
         \item One Query: $\mathcal{O}(1)$
-        \item All Queries: $\mathcal{O}(q + n)$
+        \item All Queries: $\mathcal{O}(q)$
+        \item Overall: $\mathcal{O}(q + n)$
     \end{itemize}
 \end{frame}
 
