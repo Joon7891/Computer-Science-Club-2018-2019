@@ -1,5 +1,4 @@
 \documentclass{problem-set}
-\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 \title{Team Preliminary \RNum{1}}
 \subheader{Stephen Lewis S.S. Computer Science Club}
@@ -19,7 +18,7 @@ The first line of input will contain an integer $t$ denoting the number of compu
 \constraints
 $1 \leq t \leq 100000$\\
 $0 \leq A \leq 20$\\
-$0 < B \leq 20$
+$1 \leq B \leq 20$
 
 \outputformat
 For each computation, output the value of $A^B$.
@@ -56,7 +55,27 @@ Deficit \\
 \section{Present Delivery}
 % prefix-sum array (santa delivers presents to n houses where h_i denotes the amount of presents delivered to house i. Determine the amount of presents delivered from house i to house j). 
 
-\section{Every Mom's Nightmare}
+\newpage
+\section{Every Mother's Nightmare}
+Every year, in the weeks leading up to the holidays, mothers around the world take on the difficult task of buying their children gifts in order to keep them satisfied for the holidays. One particular mother has $k$ dollars, and walks into a store with $n$ gifts, each with a cost of $c$ and a satisfaction amount of $s$. She wants to ensure that she maximises the combined satisfaction of her gifts, without spending more than $k$ dollars. Determine the maximum amount of combined satisfaction possible.
+
+\inputformat
+The first line of input will contain two integers $k,$ and $n$. The next $n$ lines will contain $c_i,$ and $s_i$, the cost and satisfaction amount of gift $i$.
+
+\outputformat
+Output the maximum amount of satisfaction attainable.
+
+\addsample{
+    50 3 \\
+    10 60 \\
+    20 100 \\
+    30 120
+}{
+    220
+}
+
+
+
 % 0-1 knapsack (mom has k dollars and wants to maximize satisfaction)
 
 \end{document}
