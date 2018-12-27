@@ -1,0 +1,39 @@
+\section{Present Delivery}
+Every year, the night before Christmas, Santa's elves are hard at work preparing Father Winter's sleigh. An important component of their job is ensuring that Santa delivers the correct amount of presents in a neighbourhood—to verify that no presents were lost. In order to verify present delivery, for each house $i$, the elves track the amount of presents that should be delivered, $d_1, d_2, \dots, d_N$, and the amount of presents that were delivered, $p_1, p_2, \dots, p_N$ where $p_i$ and $d_i$ represent the respective present amount for house $i$.
+
+Help the elves determine whether Santa delivered the correct amount of presents from house $l$ to house $r$. Specifically, present delivery is valid if and only if the total amount of presents that should be delivered from $l$ to $r$ is the same as the total amount of presents that were delivered from $l$ to $r$; that is, $p_l + p_{l + 1} + \dots +p _r= d_l + d_{l + 1} + \dots +d_r$. In particular, you will answer $Q$ of these queries.
+
+\inputformat
+The first line of input contains two space-separated integers $N$ and $Q$ denoting the number of houses and the number of queries. The next line of input contains $N$ space-separated integers representing the amount of presents that should be delivered to house $i$, $d_i$. The next line of input contains $N$ space-separated integers describing the amount of presents that were delivered to house $i$, $p_i$. The next $Q$ lines of each contain a sequence of two positive integers, $l$ and $r$
+
+\constraints
+For all subtasks, $1 \leq d_i, p_i \leq 10^9$ and $1 \leq l < r \leq N$
+
+\textbf{Subtask 1 [20\%]} \\
+$1 \leq N \leq 10^3$ \\
+$1 \leq Q \leq 10^3$
+
+\textbf{Subtask 2 [30\%]} \\
+$1 \leq N \leq 10^5$ \\
+$1 \leq Q \leq 10^5$
+
+\textbf{Subtask 3 [50\%]} \\
+$1 \leq N \leq 10^6$ \\
+$1 \leq Q \leq 10^6$
+
+\outputformat
+For each query, if the present delivery is valid, print \texttt{``WOOHOO!''}, otherwise, print \texttt{``BOOHOO!''}
+\newpage
+
+\addsample
+{
+    4 2 \\
+    6 9 1 2 \\
+    7 8 2 2 \\
+    1 4 \\
+    2 3
+}
+{
+    BOOHOO! \\
+    WOOHOO!
+}
