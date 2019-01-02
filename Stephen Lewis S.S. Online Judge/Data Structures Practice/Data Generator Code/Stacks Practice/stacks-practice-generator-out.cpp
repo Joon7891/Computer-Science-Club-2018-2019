@@ -9,8 +9,8 @@ ofstream outStream;
 
 int main()
 {
-    inStream.open("stacks-practice.10.in");
-    outStream.open("stacks-practice.10.out");
+    inStream.open("stacks.practice.1.in");
+    outStream.open("stacks.practice.1.out");
 
     int n, m;
     inStream >> n >> m;
