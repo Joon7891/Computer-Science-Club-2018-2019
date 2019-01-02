@@ -12,7 +12,7 @@ int n, m;
 
 int main()
 {
-    outStream.open("stacks-practice.10.in");
+    outStream.open("stacks.practice.1.in");
 
     cout << "n, m: ";
     cin >> n >> m;
