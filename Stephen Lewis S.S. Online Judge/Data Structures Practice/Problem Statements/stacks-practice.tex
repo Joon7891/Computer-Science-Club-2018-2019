@@ -8,9 +8,9 @@
 \begin{document}
 \maketitle
 
-Joon7891 is practicing data structures. He comes across the following stacks problem:
+Joon is practicing data structures. He comes across the following stacks problem:
 
-You initially have a stack of $N$ ($1 \leq N \leq 1000$) elements. There are $M$ ($1 \leq M \leq 100000$) operations you need to perform on it.
+You initially have a stack of $N$ ($1 \leq N \leq 1,000$) elements. There are $M$ ($1 \leq M \leq 5,000$) operations you need to perform on it.
 
 Each operation is one of the following:
 \begin{itemize}
@@ -21,7 +21,7 @@ Each operation is one of the following:
     \item $N$ - output the number of elements in the stack
 \end{itemize}
 
-It is guaranteed that all elements in the array will be between $−10^9$ and $10^9$ (inclusive).
+It is guaranteed that all elements in the array will be between $1$ and $10^9$ (inclusive).
 
 \inputformat
 The first line of input will contain integers $N$ and $M$.
@@ -32,5 +32,29 @@ The next $M$ lines will have an operation in the format described above.
 
 \outputformat
 For each $T, P,$ or $N$ operation, output the answer on its own line.
+
+\newpage
+
+\addsample
+{
+    10 10 \\
+    42 18468 6335 26501 19170 15725 11479 29359 26963 24465 \\
+    I 28145 \\
+    R \\
+    T \\
+    R \\
+    R \\
+    I 11942 \\
+    T \\
+    R \\
+    R \\
+    N 
+}
+{
+    24465 \\
+    11942 \\
+    7
+}
+
 
 \end{document}
