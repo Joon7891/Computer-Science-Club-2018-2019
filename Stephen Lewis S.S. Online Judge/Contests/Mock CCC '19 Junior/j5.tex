@@ -1,0 +1,36 @@
+\section*{J5 - Strictly Increasing}
+Steven is learning about sequences. In particular, he is learning about strictly increasing sequences - sequences in which each term is strictly greater than the last ($a_{n} > a_{n - 1}$).
+
+The sequence $1,2,4,5,9$ would be an example of a strictly increasing sequences, whereas $2,5,5,6$ would not.
+
+One particular question in his homework asks him to determine the corresponding strictly increasing sequence given $n$, the number of terms in the sequence, as well as $a_1$ and $a_n$, the first and last terms of the sequence, respectively.
+
+Knowing that there can be multiple sequences that meet this criteria, the teacher provides the class with a list of strictly increasing sequences they are to choose from to ensure that they pick the right one. Unfortunately for Steven, he has lost his sheet and has chosen to guess the correct answer rather than asking for a new sheet. Before he guesses, he wants to know the chance of him guessing the correct solution.
+
+Help him determine the number of possible sequences!
+
+\inputformat
+The first line of input consists of $n$, the number of terms in the strictly increasing sequence.
+
+The second line of input consists of $a_1$ and $a_n$, the first and last terms of the sequence.
+
+\constraints
+For all subtasks, $1 \leq a_1, a_n \leq 10^6$ and $3 \leq n$.
+
+\textbf{Subtask 1 [10\%]} \\
+$n \leq 10$ 
+
+\textbf{Subtask 2 [90\%]} \\
+$n \leq 10^4$
+
+\outputformat
+Output the number of possible sequences. If no such sequence exists, output $0$.
+
+\addsample
+{
+    4 \\
+    1 5
+}
+{
+    3
+}
