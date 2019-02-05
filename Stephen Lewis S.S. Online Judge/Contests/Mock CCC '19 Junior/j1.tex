@@ -1,0 +1,35 @@
+\section*{J1 - The Doppler Effect}
+While walking home, Tom notices that the frequency of the sound emitted by a fire engine passing by him changes in relation to the engine's position. Interested in this phenomenon, Tom runs a series of experiments and concludes that the frequency and wavelength of of a sound produced by a moving source, heard by an observer, depends on the observer's relative movement from the source. In particular, he finds that if the source is moving \textit{towards} the observer, the frequency $f_2$ heard by the observer will be \textit{greater} than that of the original frequency $f_1$. Conversely, if the source moves \textit{away} from the observer, the frequency heard by the observer will be \textit{less} than the original frequency. If neither the source or observer are moving, there is no change in frequency.
+
+\begin{itemize}
+    \item $f_2 > f_1$ where the source is moving \textbf{towards} the observer
+    \item $f_2 < f_1$ where the source is moving \textbf{away} from the observer
+    \item $f_2 = f_1$ where the source and the observer are not moving
+\end{itemize}
+
+Tom wants to determine the direction of the source relative to the observer given the original frequency and frequency heard by the observer $f_1$ and $f_2$ respectively. Help Tom answer $Q$ of these queries.
+
+\inputformat
+The first line of input consists of a single integer $Q$ denoting the number of queries to answer. The next $Q$ lines each contain a sequence of two space-separated integers $f_1$ and $f_2$ denoting the original frequency and the observed frequency.
+
+\constraints
+$1 \leq Q \leq 10^5$ \\
+$20 \leq f_1, f_2 \leq 20,000$
+
+\outputformat
+Output  \texttt{``towards''} if the source is moving towards the observer, \texttt{``away''} if the source is moving away from the observer, and \texttt{``none''} if there is no change in frequency.
+
+\newpage
+
+\addsample
+{
+    3 \\
+    791 520 \\
+    98 894 \\
+    127 214
+}
+{
+    away \\
+    towards \\
+    towards
+}
