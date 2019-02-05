@@ -1,0 +1,36 @@
+\section*{J2 - A Chemistry Question}
+According to the law of conservation of mass, when there is a chemical reaction, the mass of the reactants is the same as the mass of the products. Thus, a chemical equation is balanced when the number of atoms in the reactants is equal to the number of atoms in the products. For example, the following reaction $$N_2 + H_2 \rightarrow NH_3$$,
+is not balanced because there is one less nitrogen and one more hydrogen on the product side. Conversely, the chemical equation $$2H_2+O_2 \rightarrow 2H_2O$$, is balanced because the number of oxygen and hydrogen atoms are the same on both sides of the equation. 
+
+Jean would like to determine whether a chemical equation is balanced given the number of atoms, for each element, in the reactant and product where $R_i$ and $P_i$ represent the number of atoms for the $i$-th element respectively. An equation is balanced if and only if $R_i = P_i$ for all $1 \leq i \leq N$ where $N$ represents the number of elements.
+
+\inputformat
+The first line of input contains a single integer $N$ denoting the number of elements. The next $N$ lines of input each contain two space-separated integers $R_i$ and $P_i$ describing the number of atoms in the reactant and product for the $i$-th element respectively.
+
+\constraints
+$1 \leq N \leq 10^6$ \\
+$1 \leq R_i, P_i \leq 1,000$
+
+\outputformat
+Output \texttt{``yes''} if the equation is balanced; otherwise, output \texttt{``no''}.
+
+\addsample
+{
+    2 \\
+    2 2 \\
+    1 4
+}
+{
+    no
+}
+
+\addsample
+{
+    3 \\
+    5 5 \\
+    9 9 \\
+    7 7
+}
+{
+    yes
+}
