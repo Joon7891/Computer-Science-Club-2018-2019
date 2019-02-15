@@ -1,7 +1,11 @@
-\section*{J4 - Cubic Sums}
-George is learning about exponents and sums today in his Grade 9 math class. One particular combination of exponents and sums that have captivated George's attention are $a$-$b$ cubic sums. An $a$-$b$ cubic sum is calculated as the sum of all cubes of integers between $a$ and $b$, inclusive.
+\section*{J4 - $-\frac{1}{12}$}
+Summing up natural numbers is fun - that is until someone tells you that the sum of all natural numbers is $−\frac{1}{12}$. While this is interesting and mind-boggling, this does not apply to you because today you will be examining some finite quantity of natural numbers, not \textit{all} natural numbers.
 
-To help compute $a$-$b$ cubic sums quickly, George has attempted to create a program to do the calculations for him. However, it either gives him the wrong answer, takes too much time, or takes up too much memory. Will you show him a working example?
+As a mental and physical exercise, you decide to sum up all the natural numbers between $a$ and $b$ inclusive, by hand. However, this soon ends up being very time consuming and so your good friend Steven decides to write a program to determine this sum for you.
+
+Excited at the ability to quickly sum up all the natural numbers in a given range, you decide to plug away various values of $a$ and $b$ into Steven's program before coming to an important realization - Steven can't solve problems equivalent to Junior CCC problems. He can solve hard problems efficiently using centroid decomposition, Kruskal's algorithm, segment trees, and a variety of different techniques, but somehow he can't create programs to solve simple problems efficiently.
+
+Will you show Steven an efficient example?
 
 \inputformat
 The first and only line of input will consist of two integers $a$ and $b$.
@@ -16,12 +20,12 @@ $|a - b| \leq 10^6$ \\
 $|a - b| \leq 10^9$
 
 \outputformat
-Output the corresponding $a$-$b$ cubic sum modulus $10^9 + 7$.
+Output the sum of all natural numbers between $a$ and $b$, inclusive.
 
 \addsample
 {
     5 10
 }
 {
-    2925
+    45
 }

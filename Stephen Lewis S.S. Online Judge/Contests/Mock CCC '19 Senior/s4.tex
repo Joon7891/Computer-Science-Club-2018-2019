@@ -1,2 +1,33 @@
 \section*{S4 - The Cost of War}
-In any war, an important consideration for army generals and leaders is \textit{cost}. After all, wars can be expensive and it is important to not bankrupt 
+In any war, an important consideration for an army is \textit{funding}. After all, wars can be expensive and an army is only as strong as its finances allows them to be. However, funding is secondary to strategy. After all, a well-funded army with no strategy will surely be beaten by a poor army with astounding strategy.
+
+One particular army, the army of Kalisha, has $N$ bases that they want to connect in order to ensure fast and easy transportation of food, troops, and equipment. However, after reaching out to a contractor, they determine that connecting roads \textit{extremely} expensive to build.
+
+With strategy having priority over cost, the army of Kalisha needs to ensure all bases are connected - either directly or indirectly. However, in doing so, they also need to ensure that they are minimizing the cost of building the connecting roads. 
+
+Help them determine the minimum cost of connecting their bases!
+
+\inputformat
+The first line of input contains two space-separated integers $N$ and $M$, the number of bases, and the number of possible roads. The next $M$ lines of input contains three space-separated integers $a$, $b$, and $c$, indicating that bases $a$ and $b$ can be connected at cost $c$.
+
+\constraints
+$2 \leq N \leq 1\;000$ \\
+$1 \leq M \leq 5\;000$ \\
+$1 \leq a, b \leq N$ \\
+$1 \leq c \leq 1\;000$
+
+\outputformat
+The output consists of a single integer, the minimum cost to connect all the bases.
+
+\addsample
+{
+    4 5 \\
+    1 2 10 \\
+    2 3 12 \\
+    3 4 3 \\
+    4 1 9 \\
+    1 3 30
+}
+{
+    22
+}
