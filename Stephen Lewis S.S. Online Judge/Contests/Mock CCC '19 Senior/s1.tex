@@ -1,0 +1,26 @@
+\section*{S1 - Kuu Sushi}
+Being the sushi lover he is, Walter loves to go to Kuu Sushi. Since Kuu sushi is expensive, Walter wants to eat the tastiest piece of sushi to maximize the bang for his buck. Walter determines the tastiness of a piece of sushi based on the content of rice, fish, and wasabi. In particular, Walter defines the tastiness, $T$, of a piece of sushi as $$T=r+f+w,$$ where $r$ represents the rice score, $f$ represents the fish score, and $w$ represents the wasabi score.
+
+Since Kuu sushi rotates it's dishes every day, Walter realizes that his scoring method does not give accurate results. Thus, Walter assigns tasty coefficients $a$, $b$, and $c$ to each of the scores (rice, fish, and wasabi respectively) in order to maintain consistency across different days. His new formula for the tastiness is $$T=ar+bf+cw.$$ Given the tasty coefficients for the day and $N$ sushi scores (rice fish, and wasabi), help him determine the tastiest sushi.
+
+\inputformat
+The first line of input contains a single integer $N$ denoting the number of sushi pieces. The next line of input consists of three space-separated integers denoting the tasty coefficients $a$, $b$, and $c$ respectively. The next $N$ lines of input each contain a sequence of three space-separated integers describing the rice, fish, and wasabi score for the $i$-th piece of sushi, $r$, $f$, and $w$ respectively.
+
+\constraints
+$1 \leq N \leq 10,000$ \\
+$1 \leq a, b, c \leq 10^6$ \\
+$0 \leq r, f, w \leq 100$
+
+\outputformat
+The output consists of a single integer, the score of the tastiest sushi.
+
+\addsample
+{
+    2 \\
+    1 2 1 \\ 
+    0 9 17 \\
+    8 3 4 \\
+}
+{
+    35
+}

@@ -1,0 +1,30 @@
+\section*{S2 - Modified Tic-Tac-Toe}
+In a classic game of tic-tac-toe, two players take turns marking a $3$ x $3$ grid with either an \texttt{``X''} or an \texttt{``O''}. The player who success in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. 
+
+However, two particular tic-tac-toe players, Shon and Joon, find this game too simple and instead decide to play a \textit{modified} version of tic-tac-toe, in which they play on an $N$ x $N$ grid and need to place $N$ marks in a horizontal, vertical, or diagonal row to win the game. As well, since they want to play for as long as possible, instead of ending the game as soon as someone wins, they play until the entire $N$ x $N$ grid is filled up and award the game to whoever has more \texttt{``wins''} - that is, whoever has more horizontal, vertical, and diagonal rows of their mark.
+
+Given an $N$ x $N$ tic-tac-toe grid, determine the final score, and whether Joon won, Shon won, or the game ended in a tie.
+
+\textbf{Note:} Joon marks his moves with an \texttt{``X''}, whereas Shon marks his moves with an \texttt{``O''}.
+
+\inputformat
+The first line of input contains $N$, the size of the modified tic-tac-toe grid. The next $N$ lines of input contains $N$ characters, either an \texttt{``X''} or an \texttt{``O''}.
+
+\constraints
+$3 \leq N \leq 20$
+
+\outputformat
+The first line of output consists of two space-separated integers, $S_{Joon}$ and $S_{Shon}$, Joon's score and Shon's score, respectively. The second line should output \texttt{``Joon''} if Joon won, \texttt{``Shon''} if Shon won, or \texttt{``Tie''} if the game ended in a tie.
+
+\addsample
+{
+    4 \\
+    OOXX \\
+    XXXO \\
+    OOXX \\
+    XXXX
+}
+{
+    2 0 \\
+    Joon
+}
