@@ -1,0 +1,43 @@
+\section*{S3 - Grading on a Curve}
+In order to reduce the amount of time they spend marking, Mr. Findlay and Mr. Kassil have devised a new grading system that they feel, minimizes the effort on their part; however, since it is already a month into the semester, Mr. Findlay and Mr. Kassil need to convert the grades of $N$ students from the old system in the new system.
+
+The new grading system works by scaling the test results of students by a global weight value. Computing the global weight consist of multiple steps: first we take a multiset of N integers (one integer for each student in the class), $A$, and creating a new multiset, $S$, that contains all the contiguous multisets (segments) from $A$. We call $S$ the segment set. For example, if $A = {1,2,3}$, there are four possible segment sets consisting of
+
+\begin{itemize}
+    \item three individual-element segments: $S = \{\{1\}, \{2 \}, \{3\}\}$
+    \item two segments, one with two elements and the other with an individual element: $S = \{\{1,2\}, \{3\}\}$
+    \item two segments, one with an individual element and the other with two elements: $S = \{\{1\},\{2,3\}\}$
+    \item and one segment containing three elements: $S = \{\{1, 2, 3\}\}$
+\end{itemize}
+
+The global weight is the defined as the sum of the values of all the possible segment sets; if $P$ is a set containing all the possible segment sets, $$w = \sum_{i = 1}^{|P|} V_{\Omega}(P_i)$$ The value of some segment set $S$ is the sum of the values for all segments in $S$ modulo $M$, defined as $$V_{\Omega}(S) = \Big(\sum_{i = 1}^{|S|} V(S_i) \Big) \text{ mod } M$$, where $V_{\Omega}$ represents the value of segment set $S$ and $V(X)$ represents the value of a segment $X$ defined as $$V(X) = |X|\sum_{i = 1}^{|S|} V(S_i)$$ The final grade of a student in the new system, $g$ is a function of the grade in the old system, defined as $g(i) = i(\frac{w}{M})$, where $i$ represents the grade of the student in the old system.
+
+Given a multiset of $N$ integers, $A_1, \dots, A_N$, and the grades of the students' in the old system, $G_1, \dots, G_N$, determine the grade of each student in the new system, $F_i$, where $F_i = g(G_i)$.
+
+\inputformat
+The first line of input contains a single integer $N$ representing the number of students. The next line of input consists of $N$ space-separated integers denoting integers in $A$. The next line of input consists of $N$ space-separated describing the grades of the students, $G$.
+
+\constraints
+For all subtasks $M = 2^{17} - 1$, $1 \leq A_i \leq 10^9$, and $0 \leq G_i \leq 100$.
+
+\textbf{Subtask 1 [20\%]} \\
+$1 \leq N \leq 15$
+
+\textbf{Subtask 2 [30\%]} \\
+$1 \leq N \leq 1\;000$
+
+\textbf{Subtask 3 [50\%]} \\
+$1 \leq N \leq 10^6$
+
+\outputformat
+The output consists of a single line of $N$ space-seperated numbers rounded to two decimal place, the $i$-th of which representing $F_i$.
+
+\addsample
+{
+    6 \\
+    450064581 961657921 247421099 30011819 785768355 919482138 \\
+    54 69 35 78 33 11
+}
+{
+    23.16 29.59 15.01 33.45 14.15 4.72
+}
